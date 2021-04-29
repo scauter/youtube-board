@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"strconv"
@@ -338,8 +337,5 @@ func main() {
 		logout(w, rq)
 	})
 
-	fmt.Println("*** Start Web Server ***")
-	panic(http.ListenAndServe("", nil))
-	fmt.Println("*** Finish Web Server ***")
-
+	panic(http.ListenAndServe("localhost:8000", nil))
 }
